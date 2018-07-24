@@ -1,0 +1,11 @@
+.gradle/
+.idea/libraries/
+.idea/workspace.xml
+.idea/uiDesigner.xml
+.idea/compiler.xml
+.idea/misc.xml
+.idea/vcs.xml
+build/
+out/
+temp/
+
