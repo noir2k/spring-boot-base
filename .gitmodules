@@ -1,0 +1,3 @@
+[submodule "stellar-sdk"]
+	path = stellar-sdk
+	url = https://github.com/stellar/java-stellar-sdk.git
