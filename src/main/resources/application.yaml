@@ -1,6 +1,14 @@
 spring:
   profiles:
     active: local-mariadb
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 411922572522-amjb41f97ahgnbq06jiicm13pt33nrg6.apps.googleusercontent.com
+            client-secret: NP3ICbi4VpnrAAdUS5aAgK4u
+
   datasource:
     initialization-mode: always
   data:
