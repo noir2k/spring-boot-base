@@ -2,7 +2,6 @@ package net.hiskarma.stellarTest.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -24,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         // TODO: csrf 임시 disable => POST 작동 안됨
         // TODO: csrf enable 하고, client에서 ajax POST 호출 시, header에 csrf token 첨부하여 요청하게 할 것.
-        http.csrf().disable()
+        http.cors().and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/**", "/api/browser/**").authenticated()
                 .antMatchers("/api/users**").permitAll()
@@ -44,6 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         .allowedOrigins("*")
+                        .allowedMethods("GET", "PUT", "DELETE")
                         .allowCredentials(false)
                         .maxAge(3600);
             }
