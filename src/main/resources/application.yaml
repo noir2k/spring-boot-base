@@ -8,16 +8,12 @@ spring:
           google:
             client-id: 411922572522-amjb41f97ahgnbq06jiicm13pt33nrg6.apps.googleusercontent.com
             client-secret: NP3ICbi4VpnrAAdUS5aAgK4u
-
   datasource:
     initialization-mode: always
   data:
     mongodb:
       ### default: 원격 서버 docker 접속
-      uri: mongodb://192.168.0.20:27017
-      database: spring_mongodb
-      username: mongoadmin
-      password: 112233
+      uri: mongodb://spring_user:112233@192.168.0.20/spring_database
     rest:
       base-path: /api
     jpa:
