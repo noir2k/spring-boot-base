@@ -1,18 +1,33 @@
 package net.hiskarma.stellarTest.configuration;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
+    public void configure(WebSecurity web) throws Exception {
+        // For resources and...
+//        web.ignoring().antMatchers("/css/**", "/script/**", "/");
+        // 임시.
+        web.ignoring().antMatchers("/api/users**");
+    }
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/**", "/login**", "/error**", "/api/user**").permitAll()
-                .antMatchers("/api/browser/**").authenticated()
-//                .anyRequest().authenticated()
+        // TODO: csrf 임시 disable => POST 작동 안됨
+        // TODO: csrf enable 하고, client에서 ajax POST 호출 시, header에 csrf token 첨부하여 요청하게 할 것.
+        http.csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/**", "/api/browser/**").authenticated()
+                .antMatchers("/api/users**").permitAll()
                 .and()
                 .oauth2Login()
                 .defaultSuccessUrl("/loginSuccess")
@@ -20,5 +35,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutSuccessUrl("/").permitAll();
+    }
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/api/**")
+                        .allowedOrigins("*")
+                        .allowCredentials(false)
+                        .maxAge(3600);
+            }
+        };
     }
 }
