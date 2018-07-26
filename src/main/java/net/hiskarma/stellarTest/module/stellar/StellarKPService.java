@@ -16,7 +16,7 @@ public class StellarKPService {
 
     @PostConstruct
     private void initialize() {
-       PostLaunchExecutor.addTask(this::keyPairTest);
+        PostLaunchExecutor.addTask(this::keyPairTest);
     }
 
     private void keyPairTest() {

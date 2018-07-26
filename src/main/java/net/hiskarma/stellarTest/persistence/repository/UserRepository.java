@@ -1,6 +1,6 @@
-package net.hiskarma.stellarTest.repository;
+package net.hiskarma.stellarTest.persistence.repository;
 
-import net.hiskarma.stellarTest.model.User;
+import net.hiskarma.stellarTest.persistence.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

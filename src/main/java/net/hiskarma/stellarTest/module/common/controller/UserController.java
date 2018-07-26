@@ -1,6 +1,6 @@
-package net.hiskarma.stellarTest.controller;
+package net.hiskarma.stellarTest.module.common.controller;
 
-import net.hiskarma.stellarTest.repository.UserRepository;
+import net.hiskarma.stellarTest.persistence.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

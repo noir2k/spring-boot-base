@@ -1,4 +1,4 @@
-package net.hiskarma.stellarTest.controller;
+package net.hiskarma.stellarTest.module.common.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;

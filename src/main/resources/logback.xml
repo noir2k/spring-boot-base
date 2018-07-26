@@ -13,7 +13,7 @@
     <logger name="sun.rmi" level="info" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
-    <logger name="org.springframework" level="debug" additivity="false">
+    <logger name="org.springframework" level="info" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
     <logger name="org.eclipse.jetty" level="info" additivity="false">
@@ -28,9 +28,10 @@
     <logger name="org.hibernate" level="info" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
-    <logger name="org.springframework" level="info" additivity="false">
+    <logger name="org.mongodb" level="info" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
+
 
     <root level="info">
         <appender-ref ref="STDOUT"/>

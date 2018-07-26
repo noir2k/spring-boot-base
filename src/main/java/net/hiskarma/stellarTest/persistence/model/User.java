@@ -1,4 +1,4 @@
-package net.hiskarma.stellarTest.model;
+package net.hiskarma.stellarTest.persistence.model;
 
 import lombok.Data;
 
