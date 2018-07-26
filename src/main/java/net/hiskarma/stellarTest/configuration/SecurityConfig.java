@@ -10,10 +10,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .anyRequest().authenticated()
+                .antMatchers("/**", "/login**", "/error**", "/api/user**").permitAll()
+                .antMatchers("/api/browser/**").authenticated()
+//                .anyRequest().authenticated()
                 .and()
                 .oauth2Login()
                 .defaultSuccessUrl("/loginSuccess")
-                .failureUrl("/loginFailure");
+                .failureUrl("/loginFailure")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/").permitAll();
     }
 }
