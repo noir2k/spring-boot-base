@@ -13,7 +13,8 @@ spring:
   data:
     mongodb:
       ### default: 원격 서버 docker 접속
-      uri: mongodb://spring_user:112233@192.168.0.20/spring_database
+      uri: mongodb://spring_user:112233@localhost/spring_database
+      authentication-database: spring_user
     rest:
       base-path: /api
     jpa:
