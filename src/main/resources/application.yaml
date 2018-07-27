@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: local-mariadb
+    active: local-default-mysql
   security:
     oauth2:
       client:
@@ -26,8 +26,7 @@ spring:
     ## 추후 DDL이 필요없을 경우 삭제. 초기 테스트/빌드 업 시에만 사용해볼 것.
     hibernate:
       # Hibernate ddl auto (create, create-drop, validate, update)
-      ddl-auto: update
-      use-new-id-generator-mappings: true
+      ddl-auto: create-drop
     generate-ddl: true
     show-sql: true
   devtools:
@@ -36,6 +35,9 @@ spring:
 logging:
   level:
     ROOT: DEBUG
+    org.hibernate: DEBUG
+    org.hibernate.type: trace
+
 #     org.hibernate: DEBUG
 
 ---

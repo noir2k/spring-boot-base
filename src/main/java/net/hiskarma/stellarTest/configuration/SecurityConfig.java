@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // For resources and...
 //        web.ignoring().antMatchers("/css/**", "/script/**", "/");
         // 임시.
-        web.ignoring().antMatchers("/api/users**");
+        web.ignoring().antMatchers("/**");
     }
 
     @Override
@@ -25,8 +25,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // TODO: csrf enable 하고, client에서 ajax POST 호출 시, header에 csrf token 첨부하여 요청하게 할 것.
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/**", "/api/browser/**").authenticated()
-                .antMatchers("/api/users**").permitAll()
+                .antMatchers("/my_oauth_info").authenticated()
+//                .antMatchers("/api/users**").permitAll()
                 .and()
                 .oauth2Login()
                 .defaultSuccessUrl("/loginSuccess")
@@ -37,13 +37,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public WebMvcConfigurer corsConfigurer() {
+    public WebMvcConfigurer webMvcConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         .allowedOrigins("*")
-                        .allowedMethods("GET", "PUT", "DELETE")
+                        .allowedMethods("OPTION", "GET", "PUT", "DELETE")
                         .allowCredentials(false)
                         .maxAge(3600);
             }

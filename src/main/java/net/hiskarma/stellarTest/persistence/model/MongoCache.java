@@ -4,9 +4,11 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Data
+@Entity
 @Document(collection = "mongocache")
 public class MongoCache {
     @Id
