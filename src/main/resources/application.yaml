@@ -13,27 +13,25 @@ spring:
   data:
     rest:
       base-path: /api
-    jpa:
-      repositories:
-        enabled: true
   jpa:
     ## 추후 DDL이 필요없을 경우 삭제. 초기 테스트/빌드 업 시에만 사용해볼 것.
     hibernate:
       # Hibernate ddl auto (create, create-drop, validate, update)
       ddl-auto: create-drop
-    generate-ddl: true
     show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
   devtools:
     livereload:
       enabled: true
 
----
-spring:
-  profiles: local-h2
-  data:
-    mongodb:
-      uri: mongodb://spring_user:112233@localhost/spring_database
-      authentication-database: spring_database
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE
 
 ---
 spring:
