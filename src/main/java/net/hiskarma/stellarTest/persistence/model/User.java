@@ -13,11 +13,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String name;
+    private String email;
 
-    protected User() {}
+    public User() {}
 
-    public User(String name) {
+    public User(String name, String email) {
         this.name = name;
+        this.name = email;
     }
 }
