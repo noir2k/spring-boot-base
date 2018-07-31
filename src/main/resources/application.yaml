@@ -38,13 +38,13 @@ spring:
   profiles: local
   data:
     mongodb:
-      uri: mongodb://spring_user:112233@localhost/spring_database
-      authentication-database: spring_database
+      uri: mongodb://localhost:27017/spring_database
+#      authentication-database: spring_database
   datasource:
     platform: mariadb
-    url: jdbc:mariadb://localhost:4306/spring_database
-    username: root
-    password: 112233
+    url: jdbc:mariadb://localhost:3306/spring_database
+    username: "root"
+    password: "!@coLLiGEnce#$"
     dbcp2:
       driver-class-name: org.mariadb.jdbc.Driver
 
@@ -53,12 +53,12 @@ spring:
   profiles: dev
   data:
     mongodb:
-      uri: mongodb://spring_user:112233@192.168.0.20/spring_database
-      authentication-database: spring_database
+      uri: mongodb://192.168.0.20:27017/spring_database
+#      authentication-database: spring_database
   datasource:
     url: jdbc:mariadb://192.168.0.20:4306/spring_database
-    username: root
-    password: 112233
+    username: "root"
+    password: "!@coLLiGEnce#$"
     dbcp2:
       driver-class-name: org.mariadb.jdbc.Driver
 
