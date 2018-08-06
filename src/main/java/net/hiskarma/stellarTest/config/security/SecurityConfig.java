@@ -1,5 +1,6 @@
-package net.hiskarma.stellarTest.config;
+package net.hiskarma.stellarTest.config.security;
 
+import net.hiskarma.stellarTest.config.SocialConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
