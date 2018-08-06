@@ -51,7 +51,7 @@ configurations {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-devtools')
-//    compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile('org.springframework.boot:spring-boot-starter-data-rest')
@@ -69,6 +69,8 @@ dependencies {
     compile('org.springframework.security:spring-security-oauth2-core')
     compile('org.springframework.security:spring-security-oauth2-client')
     compile('org.springframework.security:spring-security-oauth2-jose')
+
+    compile('org.modelmapper:modelmapper:2.1.0')
 
     runtime('org.mariadb.jdbc:mariadb-java-client')
     runtime('mysql:mysql-connector-java')

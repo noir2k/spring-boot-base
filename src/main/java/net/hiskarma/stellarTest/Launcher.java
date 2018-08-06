@@ -1,6 +1,6 @@
 package net.hiskarma.stellarTest;
 
-import net.hiskarma.stellarTest.configuration.CommonDefs;
+import net.hiskarma.stellarTest.config.CommonDefs;
 import net.hiskarma.stellarTest.persistence.repository.UserRepository;
 import net.hiskarma.stellarTest.util.PrefixedLogger;
 import org.springframework.beans.factory.annotation.Autowired;

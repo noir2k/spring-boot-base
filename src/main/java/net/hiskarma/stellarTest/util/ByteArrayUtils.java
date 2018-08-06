@@ -1,6 +1,6 @@
 package net.hiskarma.stellarTest.util;
 
-import net.hiskarma.stellarTest.configuration.CommonDefs;
+import net.hiskarma.stellarTest.config.CommonDefs;
 
 import java.nio.charset.Charset;
 import java.util.Arrays;

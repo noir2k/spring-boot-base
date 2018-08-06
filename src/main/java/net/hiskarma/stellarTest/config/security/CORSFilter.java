@@ -1,4 +1,4 @@
-package net.hiskarma.stellarTest.module.common.filter;
+package net.hiskarma.stellarTest.config.security;
 
 import net.hiskarma.stellarTest.util.PrefixedLogger;
 import org.springframework.stereotype.Component;

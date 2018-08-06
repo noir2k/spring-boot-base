@@ -1,4 +1,4 @@
-package net.hiskarma.stellarTest.configuration;
+package net.hiskarma.stellarTest.config;
 
 public class CommonDefs {
     public static final String CHARSET = "UTF-8";
