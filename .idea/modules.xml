@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.colligence.io.iml" filepath="$PROJECT_DIR$/.idea/modules/api.colligence.io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.colligence.io_main.iml" filepath="$PROJECT_DIR$/.idea/modules/api.colligence.io_main.iml" group="api.colligence.io" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.colligence.io_test.iml" filepath="$PROJECT_DIR$/.idea/modules/api.colligence.io_test.iml" group="api.colligence.io" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk.iml" group="stellar-sdk" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_main.iml" filepath="$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_main.iml" group="stellar-sdk" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_test.iml" filepath="$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_test.iml" group="stellar-sdk" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellarTest.iml" filepath="$PROJECT_DIR$/.idea/modules/stellarTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellarTest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/stellarTest_main.iml" group="stellarTest" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellarTest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/stellarTest_test.iml" group="stellarTest" />
     </modules>
   </component>
 </project>
