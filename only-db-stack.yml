@@ -1,0 +1,46 @@
+version: '3.4'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb-spring
+    restart: always
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+    #   MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+    - mongo-data:/data/db
+    ports:
+    - 27017:27017
+
+  mariadb:
+    image: mariadb:10.2
+    container_name: mariadb-spring
+    restart: always
+    # command: --init-file /devops/mariadb/init.sql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+    - mysql-data:/data/db
+    ports:
+    - 3306:3306
+
+#  spring-boot-base:
+#    image: .
+#    container_name: api.colligence.io
+#    depends_on:
+#    - mongodb
+#    - mariadb
+#    ports:
+#    - 8080:8080
+
+volumes:
+  mongo-data:
+    name: mongo-data
+    driver: local
+  mysql-data:
+    name: mysql-data
+    driver: local
