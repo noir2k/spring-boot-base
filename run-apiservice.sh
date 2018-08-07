@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -p 8080:8080 --name colligence-api --link mongodb-colligence:mongodb.local --link mariadb-colligence:mariadb.local --network colligence-docker-network io.colligence/colligence-api
