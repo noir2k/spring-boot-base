@@ -1,3 +1,3 @@
-rootProject.name = 'api.colligence.io'
+rootProject.name = 'io.colligence.api'
 
 include 'stellar-sdk'

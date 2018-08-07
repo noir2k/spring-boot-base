@@ -10,7 +10,7 @@
         </encoder>
     </appender>
 
-    <logger name="net.hiskarma" level="debug"
+    <logger name="io.colligence.api-test" level="debug"
             additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>

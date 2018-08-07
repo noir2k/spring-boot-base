@@ -3,7 +3,7 @@ version: '3.4'
 services:
   mongodb:
     image: mongo
-    container_name: mongodb-spring
+    container_name: mongodb-colligence
     restart: always
     # environment:
     #   MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
@@ -15,7 +15,7 @@ services:
 
   mariadb:
     image: mariadb:10.2
-    container_name: mariadb-spring
+    container_name: mariadb-colligence
     restart: always
     # command: --init-file /devops/mariadb/init.sql
     environment:
