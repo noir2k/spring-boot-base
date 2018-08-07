@@ -79,10 +79,10 @@ spring:
   profiles: docker-build
   data:
     mongodb:
-      uri: mongodb://${DATABASE_NOSQL_USER}:${DATABASE_NOSQL_PASSWORD}@${DATABASE_NOSQL_HOST}/${DATABASE_NOSQL_NAME}
+      uri: mongodb://mongodb.local:27017/spring_database
   datasource:
-    url: jdbc:mariadb://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}
-    username: ${DATABASE_USER}
-    password: ${DATABASE_PASSWORD}
+    url: jdbc:mariadb://mariadb.local:3306/spring_database
+    username: "root"
+    password: "!@coLLiGEnce#$"
     dbcp2:
       driver-class-name: org.mariadb.jdbc.Driver

@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.5'
 
 services:
   mongodb:
@@ -9,9 +9,11 @@ services:
     #   MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
     #   MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
-    - mongo-data:/data/db
+      - mongo-data:/data/db
     ports:
-    - 27017:27017
+      - 27017:27017
+    networks:
+      - backend
 
   mariadb:
     image: mariadb:10.2
@@ -23,9 +25,11 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
-    - mysql-data:/data/db
+      - mysql-data:/data/db
     ports:
-    - 3306:3306
+      - 3306:3306
+    networks:
+      - backend
 
 #  spring-boot-base:
 #    image: .
@@ -43,3 +47,7 @@ volumes:
   mysql-data:
     name: mysql-colligence
     driver: local
+
+networks:
+  backend:
+    name: colligence-docker-network
