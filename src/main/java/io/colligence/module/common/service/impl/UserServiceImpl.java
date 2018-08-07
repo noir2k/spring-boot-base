@@ -20,11 +20,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     ModelMapper modelMapper;
 
-    @Override
-    public Page<UserDto> findUserDtoList(Integer page, String name) {
-        return userRepository.findByUserPaging(name, pageRequestByPage(page))
-                .map(user -> modelMapper.map(name, UserDto.class));
-    }
+//    @Override
+//    public Page<UserDto> findUserDtoList(Integer page, String name) {
+//        return userRepository.findByUserPaging(name, pageRequestByPage(page))
+//                .map(user -> modelMapper.map(name, UserDto.class));
+//    }
 
     private PageRequest pageRequestByPage(int page) {
         return PageRequest.of(page, 10, Sort.by(Sort.Direction.DESC, "createDateTime"));

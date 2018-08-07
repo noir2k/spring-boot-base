@@ -11,9 +11,6 @@ import java.security.Principal;
 @CrossOrigin
 @RestController
 public class UserController {
-    @Autowired
-    private UserRepository userRepository;
-
     @RequestMapping("/my_oauth_info")
     public Principal user(Principal principal) {
         return principal;

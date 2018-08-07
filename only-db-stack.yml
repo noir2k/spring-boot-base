@@ -17,7 +17,6 @@ services:
     image: mariadb:10.2
     container_name: mariadb-colligence
     restart: always
-    # command: --init-file /devops/mariadb/init.sql
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
@@ -39,8 +38,8 @@ services:
 
 volumes:
   mongo-data:
-    name: mongo-data
+    name: mongo-colligence
     driver: local
   mysql-data:
-    name: mysql-data
+    name: mysql-colligence
     driver: local

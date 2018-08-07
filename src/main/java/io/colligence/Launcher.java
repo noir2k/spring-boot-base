@@ -11,9 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Launcher {
     private static final PrefixedLogger logger = PrefixedLogger.getLogger(Launcher.class);
 
-    @Autowired
-    UserRepository userRepository;
-
     public static void main(String[] args) {
         SpringApplication.run(Launcher.class, args);
     }
