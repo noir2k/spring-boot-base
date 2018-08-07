@@ -71,8 +71,6 @@ dependencies {
     runtime('org.mariadb.jdbc:mariadb-java-client')
     runtime('mysql:mysql-connector-java')
 
-    compile project(':stellar-sdk')
-
     compileOnly('org.projectlombok:lombok')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')

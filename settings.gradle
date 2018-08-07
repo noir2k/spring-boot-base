@@ -1,3 +1,1 @@
 rootProject.name = 'io.colligence'
-
-include 'stellar-sdk'

@@ -5,9 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.colligence.iml" filepath="$PROJECT_DIR$/.idea/modules/io.colligence.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.colligence_main.iml" filepath="$PROJECT_DIR$/.idea/modules/io.colligence_main.iml" group="io.colligence" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.colligence_test.iml" filepath="$PROJECT_DIR$/.idea/modules/io.colligence_test.iml" group="io.colligence" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk.iml" group="stellar-sdk" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_main.iml" filepath="$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_main.iml" group="stellar-sdk" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_test.iml" filepath="$PROJECT_DIR$/.idea/modules/stellar-sdk/stellar-sdk_test.iml" group="stellar-sdk" />
     </modules>
   </component>
 </project>
