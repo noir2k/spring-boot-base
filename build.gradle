@@ -28,7 +28,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 bootJar {
-    baseName = 'spring-boot-base'
+    baseName = 'api-colligence-io'
     version =  '1.0.0'
 }
 
