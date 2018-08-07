@@ -21,14 +21,14 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'com.palantir.docker'
 // end::plugin[]
 
-group 'io.colligence.api'
+group 'io.colligence'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 bootJar {
-    baseName = 'api-colligence-io'
+    baseName = 'colligence-api'
     version =  '1.0.0'
 }
 
