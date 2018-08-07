@@ -21,7 +21,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'com.palantir.docker'
 // end::plugin[]
 
-group 'net.hiskarma'
+group 'io.colligence'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
