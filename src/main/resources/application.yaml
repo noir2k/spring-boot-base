@@ -8,6 +8,23 @@ spring:
           google:
             client-id: 411922572522-amjb41f97ahgnbq06jiicm13pt33nrg6.apps.googleusercontent.com
             client-secret: NP3ICbi4VpnrAAdUS5aAgK4u
+          facebook:
+            client-id: ae1d08d5c1feb2b85d2f44387851a65d
+            client-secret: vFvtWZfxo9sUR84xcuMhPXJvnXiAecJ4
+          kakao:
+            client-id: ae1d08d5c1feb2b85d2f44387851a65d
+            client-secret: vFvtWZfxo9sUR84xcuMhPXJvnXiAecJ4
+            authorization-grant-type: authorization_code
+            redirect-uri-template: ${baseUrl}/oauth2/kakao/${registrationId}
+            scope: profile
+            client-name: KaKao
+            client-authentication-method: POST
+        provider:
+          kakao:
+            token-uri: https://kauth.kakao.com/oauth/token
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
   datasource:
     initialization-mode: always
   data:
@@ -24,6 +41,14 @@ spring:
       hibernate:
         format_sql: true
         use_sql_comments: true
+  redis:
+    host: localhost
+    port: 6379
+  session:
+    store-type: redis
+    redis:
+      flush-mode: on_save
+      namespace: spring:session
   devtools:
     livereload:
       enabled: true
@@ -33,7 +58,7 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type: TRACE
 
-# Setting for Actuator
+# Actuator Setting
 management:
   endpoints:
     enabled-by-default: true
