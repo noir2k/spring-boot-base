@@ -11,15 +11,27 @@ import org.springframework.security.oauth2.client.authentication.OAuth2Authentic
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @RestController
 public class LoginController {
     @Autowired
     private OAuth2AuthorizedClientService authorizedClientService;
+
+    @RequestMapping("/oauth2/kakao")
+    public String KaKaoLogin(@RequestParam("code") String code , HttpServletRequest request, HttpServletResponse response, HttpSession session)
+            throws Exception {
+
+        return "login/kakaoLogin";
+    }
+
 
     @RequestMapping("/loginSuccess")
     public String getLoginInfo(Model model, OAuth2AuthenticationToken authentication) {

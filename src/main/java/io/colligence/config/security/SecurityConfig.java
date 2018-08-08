@@ -1,6 +1,7 @@
 package io.colligence.config.security;
 
 import io.colligence.config.SocialConfig;
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -28,6 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .logoutSuccessUrl("/").permitAll()
                     .and()
                 .authorizeRequests()
+//                .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .antMatchers("/api/users**").permitAll()
                 .antMatchers("/my_oauth_info").authenticated()
                 .antMatchers("/login").anonymous()

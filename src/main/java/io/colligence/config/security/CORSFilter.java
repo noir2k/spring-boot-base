@@ -11,9 +11,11 @@ import java.io.IOException;
 @Component
 public class CORSFilter implements Filter {
     private static final PrefixedLogger logger = PrefixedLogger.getLogger(CORSFilter.class);
+
     public CORSFilter() {
         logger.debug("!!! ["+CORSFilter.class+"] initialize!!");
     }
+
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
             throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) req;
