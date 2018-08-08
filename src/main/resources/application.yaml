@@ -33,6 +33,13 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type: TRACE
 
+# Setting for Actuator
+management:
+  endpoints:
+    enabled-by-default: true
+    # [임시] use all for web
+    web.exposure.include: "*"
+
 ---
 spring:
   profiles: local
