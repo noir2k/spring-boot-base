@@ -11,6 +11,7 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface UserRepository extends JpaRepository<User, Long> {
-//    List<User> findByName(@Param("name") String name);
-//    Page<User> findByUserPaging(String name, Pageable pageable);
+    List<User> findByName(@Param("name") final String name);
+    List<User> findAllByOrderByName();
+    Page<User> findByName(String name, Pageable pageable);
 }
